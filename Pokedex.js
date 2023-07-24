@@ -7,19 +7,19 @@ import "./Pokedex.css";
 function Pokedex(props) {
   let winMessage = null;
   if (props.isWinner) {
-    winMessage = <p className="Pokedex-winner">THIS HAND WINS!</p>;
+    winMessage = <p className="Pokedex-winner">THIS HAND WINS! Get riggidy shrekt</p>;
   }
 
   return (
     <div className="Pokedex">
       <h2 className="Pokedex-title">Pokedex</h2>
       <div className="Pokedex-cards">
-        {props.pokemon.map(p => (
+        {props.pokemon.map(poke => (
           <Pokecard
-            id={p.id}
-            name={p.name}
-            type={p.type}
-            exp={p.base_experience}
+            id={poke.id}
+            name={poke.name}
+            type={poke.type}
+            exp={poke.base_experience}
           />
         ))}
       </div>
